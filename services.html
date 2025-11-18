@@ -8,14 +8,25 @@
 <body>
 <script src="js/snow.js"></script>
 <header id="site-header">
-  <div class="brand">
-    <div class="logo"><div class="mark"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24"><defs></defs><g fill="none" fill-rule="evenodd"><rect rx="6" width="24" height="24" fill="#2FBDFF"/><path d="M6.5 12c0-3 5-5 5-5s5 2 5 5c0 1.657-1.343 3-3 3h-4c-1.657 0-3-1.343-3-3z" fill="#fff"/></g></svg></div></div>
-    <div style="line-height:1">
+  <div class="brand" style="display:flex;align-items:center;width:100%;justify-content:space-between;">
+    <div class="logo" style="display:flex;align-items:center;gap:10px;">
+      <div class="mark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+          <rect rx="6" width="24" height="24" fill="#2FBDFF"/>
+          <path d="M6.5 12c0-3 5-5 5-5s5 2 5 5c0 1.657-1.343 3-3 3h-4c-1.657 0-3-1.343-3-3z" fill="#fff"/>
+        </svg>
+      </div>
+    </div>
+
+    <div>
       <div style="font-weight:700">Saptagiri Cold Storage</div>
       <div style="font-size:12px;color:#406b86">Nearby R.S. Puram · Coimbatore</div>
     </div>
+
+    <button class="menu-toggle" id="menu-toggle">☰</button>
   </div>
-  <nav>
+
+  <nav class="nav-links" id="nav-links">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
@@ -24,6 +35,16 @@
     <a class="cta" href="contact.html">Get a Quote</a>
   </nav>
 </header>
+
+<script>
+  const btn = document.getElementById("menu-toggle");
+  const links = document.getElementById("nav-links");
+
+  btn.addEventListener("click", () => {
+    links.classList.toggle("open");
+  });
+</script>
+
 <div class="snowman bottom-left small"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd"><circle cx="32" cy="44" r="12" fill="#fff"/><circle cx="32" cy="24" r="8" fill="#fff"/><circle cx="29" cy="22" r="1" fill="#333"/><circle cx="35" cy="22" r="1" fill="#333"/><path d="M32 25c1 0 2 .5 2 1s-1 1-2 1-2-.5-2-1 1-1 2-1z" fill="#F28C28"/><path d="M22 14c0-2 3-4 6-4s6 2 6 4v2h-12v-2z" fill="#2FBDFF"/><path d="M20 52c0-2 8-4 12-4s12 2 12 4c0 0-6 6-12 6s-12-6-12-6z" fill="#E6F7FF" opacity="0.7"/></g></svg></div>
 <div class="snowman top-right medium"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 64 64"><g fill="none" fill-rule="evenodd"><circle cx="32" cy="44" r="12" fill="#fff"/><circle cx="32" cy="24" r="8" fill="#fff"/><circle cx="29" cy="22" r="1" fill="#333"/><circle cx="35" cy="22" r="1" fill="#333"/><path d="M32 25c1 0 2 .5 2 1s-1 1-2 1-2-.5-2-1 1-1 2-1z" fill="#F28C28"/><path d="M22 14c0-2 3-4 6-4s6 2 6 4v2h-12v-2z" fill="#2FBDFF"/><path d="M20 52c0-2 8-4 12-4s12 2 12 4c0 0-6 6-12 6s-12-6-12-6z" fill="#E6F7FF" opacity="0.7"/></g></svg></div>
 <main>

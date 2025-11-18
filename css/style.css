@@ -105,3 +105,64 @@ footer{padding:18px 24px;text-align:center;color:#fff;background:#07243a;margin-
     font-weight: 600;
   }
 }
+/* --- CONTACT PAGE MOBILE FIXES --- */
+
+@media(max-width: 900px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .contact-grid form {
+    width: 100%;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  }
+
+  .contact-grid form input,
+  .contact-grid form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d4dce4;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .contact-grid form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    color: #003060;
+  }
+
+  /* Buttons on mobile */
+  .contact-grid form button.cta,
+  .contact-grid form a.cta {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 12px !important;
+    border-radius: 10px;
+  }
+
+  /* WhatsApp button adjust */
+  .contact-grid form a.cta {
+    background: #25D366 !important;
+    color: #fff !important;
+  }
+
+  /* Contact card */
+  .contact-grid .card {
+    width: 100%;
+    padding: 18px !important;
+  }
+  
+  /* Fix top spacing due to fixed header */
+  body {
+    padding-top: 80px;
+  }
+}
